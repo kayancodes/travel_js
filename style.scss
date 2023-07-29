@@ -1,0 +1,526 @@
+
+//IMPORTS
+@import "responsive/breakpoints.scss";
+@import "responsive/devices.scss";
+
+
+
+
+/* ===================== DEBUT GOOGLE FONTS ======================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap');
+
+
+
+
+
+/* DEBUT ROOT*/
+:root{
+
+
+/*--------COLOR--------------------------*/   
+
+
+// --color0:#fff;
+// --color1:#eeecec;
+// --color2:#d4d4d4;
+// --color3:#adadad;
+// --color4:#000; //text-color
+// --color5:#2F1817;
+// --colorTheme: #2a292e;
+// --color6:#dadce0;
+// --color7:#202124;
+// --color8:#404040;
+
+--color0:#fff;
+--color1:#efefef;
+--color2:#d4d4d4;
+--color3:#adadad;
+--color4:#f7f7f7;
+// $color4:#8E8E8E;
+--color5:#000; 
+--color6:#404040;
+
+
+
+
+
+
+/*--------FONT AND TYPOGRAPHY---------------------------*/
+--title-font:'Roboto', sans-serif;
+--body-font: 'Roboto', sans-serif;
+
+
+--h1-font-size:1.9rem;
+--h1-font-size-Mobile:1.9rem;
+--h2-font-size:1.6rem;
+--h3-font-size:0.8125rem;
+--normal-plus: 1rem;
+--normal-font-size: 0.8125rem;
+--small-font-size:0.5625rem;
+--smaller-font-size:0.4375rem;
+
+@include md{
+    // --h1-font-size:2.8rem;
+    --h2-font-size:1.3rem;
+    --h3-font-size:0.9375rem;
+    --normal-font-size:0.8125rem;
+    --small-font-size:0.625rem;
+    --smaller-font-size:0.4375rem
+}
+
+
+/*--------FONT WEIGHT----------------------------------------------------------*/
+--font-thin: 100;
+--font-extraL: 200;
+--font-light: 300;
+--font-regular: 400;
+--font-medium: 500;
+--font-semi-bold: 600;
+--font-bold: 700;
+
+
+/*--------MARGIN BOTTOM---------------------------*/
+--mb-30:0.9375rem;
+--mb-40:1.25rem;
+--mb-50:3.125rem;
+--mb-60:3.75rem;
+--mb-70:4.375rem;
+--mb-100:6.25rem;
+
+@include md{
+    --mb-30:1.875rem;
+    --mb-40:2.5rem;
+    --mb-50:3.125rem;
+    --mb-60:3.75rem;
+    --mb-100:6.25rem;
+}
+
+}
+
+
+
+
+
+
+
+
+//===================== DEBUT BASE - RESET HTML ==========================================//
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size-Mobile);
+    font-weight: var(--font-normal);
+    margin-bottom: .5rem;
+    color: var(--color5);
+    text-align: left;
+}
+
+
+h2{
+    font-family: var(--body-font);
+    font-weight: var(--font-regular);
+    margin-bottom: 2rem;
+    font-size: var(--h2-font-size);
+    color: var(--color3);
+}
+
+h3{
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: 0rem;
+}
+
+
+p{
+    font-family: var(--body-font);
+    color:var(--color5);
+    font-weight: var(--font-light);
+    font-size: var(--normal-plus);
+    line-height: 1.6rem;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+main{
+    width: 100%;
+    display: block;
+    margin: 4.6875rem auto 0;
+    padding: 0 2rem;
+}
+
+
+
+
+
+//---------------------------------DEBUT BUTTONS-----------------------------------//
+
+//----- DEBUT BUTTON 1 DE BASE -----------------------//
+.button {
+    font-family: var(--title-font);
+    display: inline-block;
+    background-color:var(--color5);
+    color: var(--color5);
+    padding: .5rem 2rem;
+    font-weight: var(--font-medium);
+    font-size: var(--small-font-size);
+    transition: .3s;
+}
+.button:hover {
+    background-color: var(--color6);
+}
+//----- FINBUTTON 1 DE BASE -----------------------//
+
+
+//----- DEBUT BUTTON THEME HEADER -----------------------//
+.buttonBack{
+    background-color: var(--color5);
+    border: 1px solid var(--color5);
+    color:var(--color0);
+}
+.buttonBack:hover {
+    background-color:--color6;
+    color:var(--color0);
+    font-weight:var(--font-semi-bold);
+    border: 1px solid var(--color6);
+}
+//----- FIN BUTTON THEME HEADER -----------------------//
+
+
+//===================== FIN BASE - RESET HTML ==========================================//
+
+
+
+
+
+
+
+
+
+//------------ DEBUT VERSION MOBILE FIRST ( > 414px)------------------------------------------------------------------//
+
+
+/*===================== DEBUT MAIN_HEADER ==========================================*/
+.main_header{
+    text-align: left;
+    margin-bottom: 4rem;
+}
+/*===================== FIN MAIN_HEADER ==========================================*/
+
+
+
+/*===================== DEBUT INTRODUCTION==========================================*/
+
+//----- DEBUT INTRODUCTION UN ---------------------------------------//
+.main__body .introduction{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: var(--mb-100);
+}
+
+
+.introduction_img{
+    margin-bottom: var(--mb-50);
+}
+.introduction_img--un{
+    margin-bottom: var(--mb-50);
+}
+.introduction_img--deux{
+    margin-bottom: var(--mb-50);
+}
+
+
+.main__body .introduction_texte{
+    width: 100%;
+    margin-bottom: var(--mb-60);
+    text-align: left;
+}
+.main__body .introduction_button{
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+.main__body .introduction_infos{
+    width: 100%;
+    display: flex;
+    font-size: 11px;
+    margin: 0rem 0;
+}
+.main__body .introduction_infos h3{
+    font-size: 13px;
+    margin-bottom: .2rem;
+}
+.main__body .introduction_infos p{
+    font-size: 13px;
+}
+
+
+.main__body .introduction_infos--gauche{
+    width: 50%;
+}
+.gauche_item{
+    margin-bottom: 1.2rem;
+}
+.gauche_item:last-child{
+    margin-bottom: 0rem;
+}
+.main__body .introduction_infos--gauche p, .main__body .introduction_infos--droite p{
+line-height: 1.3rem;
+}
+
+
+.main__body .introduction_infos--droite{
+    width: 50%;
+}
+.droite_item{
+    margin-bottom: 1.2rem;
+}
+.droite_item:last-child{
+    margin-bottom: 0rem;
+}
+
+/*===================== FIN INTRODUCTION=======================================================*/
+
+
+
+
+
+
+
+
+/*===================== DEBUT BOARD =======================================================*/
+.main__body .board{
+
+
+    .board_img--un{
+        padding-top: var(--mb-100);
+        margin-bottom: var(--mb-100);
+    }
+    .board_img--deux{
+        margin-bottom: var(--mb-100);
+    }
+    .board_img--trois{
+        margin-bottom: var(--mb-100);
+    }
+}
+/*===================== FIN BOARD =======================================================*/
+
+
+
+
+//========DEBUT SCROLL UP==============================================//
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--color5);
+    padding: .35rem .5rem;
+    border-radius: .0rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    color: white;
+}
+
+.scrollup:hover{
+    background-color: var(--color6);
+
+}
+
+.scrollup__icon{
+    font-size:1rem;
+    color: #fff;
+}
+
+.show-scroll{
+    bottom: 5rem;
+}
+//========FIN SCROLL UP==============================================//
+
+
+
+
+/*===================== DEBUT FOOTER ==========================================*/
+footer{
+    width: 100%;
+    border-top: 1px solid #efefef;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color0);
+    padding: 1.5rem 0;
+}
+
+.footer__inner p{
+    color:var(--color5);
+    padding: 0 0.625rem;
+    font-weight:var(--font-normal);
+    font-family: var(--body-font);
+    font-size: 14px;
+}
+/*===================== FIN FOOTER ==========================================*/
+
+//------------ FIN VERSION MOBILE FIRST ( > 414px)------------------------------------------------------------//
+
+
+
+
+
+
+
+/*===================== DEBUT RESPONSIVE ====================================================================================*/
+
+//------------ DEBUT S ( > 414px) : small smartphones (landscape view) ---------//
+@include s{}
+//------------ FIN S ( > 414px) : small smartphones (landscape view) ---------//
+
+
+//------------ DEBUT SM ( > 568px) : ssmall tablets and large smartphones (landscape view) ---------//
+@include sm{}
+//------------ FIN SM ( > 568px) : small tablets and large smartphones (landscape view) ---------//
+
+
+
+//------------ DEBUT MD ( > 768px) : small tablets and large smartphones (landscape view) ---------//
+@include md{
+
+    h1{
+        font-size: var(--h1-font-size);
+    }
+
+    main{
+        padding: 0 4rem;
+    }
+
+
+    .main_header{
+        text-align: left;
+        margin-bottom: 8rem;
+    }
+    .main_header h1{
+        text-align: left;
+    }
+    .main_header h2{
+        text-align: left;
+        margin-bottom: var(--mb-30);
+    }
+
+
+    .main__body .introduction{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        }
+        
+    .main__body .introduction_texte{
+        width: 60%;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        padding-right: 5rem;
+    }
+    .main__body .introduction_button{
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .main__body .introductionSuite_texte{
+        margin-top: 2rem;
+    }
+        
+    .main__body .introduction_infos{
+        width: 40%;
+    }
+
+    .main__body .introduction_infos {
+        margin: 0;
+        padding-top: 0.4rem;
+    }
+
+
+    .scrollup {
+        right:0.5rem;
+    }
+
+}
+//------------ FIN MD ( > 768px) : small tablets and large smartphones (landscape view) ---------//
+
+
+
+//------------ DEBUT LG ( > 962px) : Tablets and small desktops ---------//
+@include lg{
+
+    .main{
+        width: 1140px;
+        padding: 0 5rem;
+    }
+
+
+    // p{
+    //     // font-family: var(--body-font);
+    //     // color:var(--color5);
+    //     // font-weight: var(--font-light);
+    //     font-size: var(--normal-plus);
+    // }
+    
+
+    .main__body .introduction_texte{
+        padding-right: 10rem;
+    }
+
+    .main__body .introductionSuite_texte {
+        margin-top: 2rem;
+    }
+
+    .main__body .introduction_texte {
+        width: 70%;
+    }
+    .main__body .introduction_infos {
+        width: 30%;
+    }
+
+
+    .scrollup {
+        right:.7rem;
+    }
+   
+
+    .footer__inner a{
+        font-size: var(--normal-font-size);
+   }
+}
+//------------ FIN LG ( > 962px) : Tablets and small desktops ---------//
+
+
+/*===================== FIN RESPONSIVE ====================================================================================*/
+
