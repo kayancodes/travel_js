@@ -180,7 +180,6 @@ main {
 }
 
 .main__body .introduction_texte p {
-  border: 1px solid red;
   margin-bottom: 1.2rem !important;
 }
 
